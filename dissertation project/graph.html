@@ -1,0 +1,100 @@
+<!-- <!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript">
+function fun() {
+var y1=20;
+var y2=60;
+var y3=60;
+var y4=60;
+var y5=60;
+var y6=60;
+var y7=60;
+var y8=60;
+var y9=60;
+var y10=60;
+var chart = new CanvasJS.Chart("chartContainer", {
+	theme: "light1", // "light2", "dark1", "dark2"
+	animationEnabled: false, // change to true
+	title:{
+		text: "Basic Column Chart"
+	},
+	data: [
+	{
+		// Change type to "bar", "area", "spline", "pie",etc.
+		type: "column",
+		dataPoints: [
+			{ label: "apple",  y: y1  },
+			{ label: "orange", y: y2  },
+			{ label: "banana", y: y3  },
+			{ label: "mango",  y: y4  },
+			{ label: "grape",  y: y5  },
+      {label: "apple",  y: y6 },
+     { label: "orange", y: y7  },
+     { label: "banana", y: y8  },
+     { label: "mango",  y: y9  },
+     { label: "grape",  y: y10  },
+		]
+	}
+	]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+<<input type="number" id="m1" value="">
+<input type="button" name="btn" onclick="fun();" value="Click me">
+</body>
+</html> -->
+
+
+
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript">
+  function fun() {
+
+    var y1=parseInt(document.getElementById('y1').value);
+	var chart = new CanvasJS.Chart("chartContainer1", {
+		theme: "light2",
+		title:{
+			text: "Print Chart using print() method"
+		},
+		data: [
+		{
+			type: "column",
+			dataPoints: [
+				{ label: "apple",  y: y1  },
+				{ label: "orange", y: 15  },
+				{ label: "banana", y: 25  },
+				{ label: "mango",  y: 30  },
+				{ label: "grape",  y: 28  }
+			]
+		}
+		]
+	});
+
+	document.getElementById('im1').innerHTML=chart.render();
+  	document.getElementById("printChart").addEventListener("click",function(){
+    	chart.print();
+    });
+}
+</script>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<body>
+  <input type="number" id="y1" name="y1" >
+<div id="chartContainer1"></div>
+  <button id="printChart" onclick="fun()">Print Chart</button>
+  <div id="im1" >
+    </div>
+</body>
+</html>

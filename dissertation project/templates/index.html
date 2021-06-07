@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+  <style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th {
+    height: 80px;
+   width:80px;
+  }
+  td{
+   height: 20px;
+   width:20px;
+  }
+  </style>
+
+
+  <script>
+  function bigImg(x) {
+    x.style.height = "64px";
+    x.style.width = "64px";
+  }
+
+  function normalImg(x) {
+    x.style.height = "32px";
+    x.style.width = "32px";
+  }
+
+
+  function mouseOver() {
+    document.getElementById("demo1").style.color = "red";
+  }
+
+  function mouseOut() {
+    document.getElementById("demo1").style.color = "blue";
+  }
+
+
+
+  function mouseOver2() {
+  document.getElementById("demo2").style.color = "red";
+  }
+
+  function mouseOut2() {
+    document.getElementById("demo2").style.color = "blue";
+  }
+
+
+
+  function mouseOver3() {
+  document.getElementById("demo3").style.color = "red";
+  }
+
+  function mouseOut3() {
+    document.getElementById("demo3").style.color = "blue";
+  }
+
+
+
+  function mouseOver4() {
+  document.getElementById("demo4").style.color = "red";
+  }
+
+  function mouseOut4() {
+    document.getElementById("demo4").style.color = "blue";
+  }
+
+
+
+  function mouseOver5() {
+  document.getElementById("demo5").style.color = "red";
+  }
+
+  function mouseOut5() {
+    document.getElementById("demo5").style.color = "blue";
+  }
+
+
+
+  function mouseOver6() {
+  document.getElementById("demo6").style.color = "red";
+  }
+
+  function mouseOut6() {
+    document.getElementById("demo6").style.color = "blue";
+  }
+
+
+
+
+  function mouseOver7() {
+  document.getElementById("demo7").style.color = "red";
+  }
+
+  function mouseOut7() {
+    document.getElementById("demo7").style.color = "blue";
+  }
+
+
+
+
+  function mouseOver8() {
+  document.getElementById("demo8").style.color = "red";
+  }
+
+  function mouseOut8() {
+    document.getElementById("demo8").style.color = "blue";
+  }
+
+
+
+
+  function mouseOver9() {
+  document.getElementById("demo9").style.color = "red";
+  }
+
+  function mouseOut9() {
+    document.getElementById("demo9").style.color = "blue";
+  }
+
+
+
+
+  function mouseOver10() {
+  document.getElementById("demo10").style.color = "red";
+  }
+
+  function mouseOut10() {
+    document.getElementById("demo10").style.color = "blue";
+  }
+
+
+
+
+  function mouseOver11() {
+  document.getElementById("demo11").style.color = "red";
+  }
+
+  function mouseOut11() {
+    document.getElementById("demo11").style.color = "blue";
+  }
+
+
+
+  function mouseOver12() {
+  document.getElementById("demo12").style.color = "red";
+  }
+
+  function mouseOut12() {
+    document.getElementById("demo12").style.color = "blue";
+  }
+
+
+
+  </script>
+
+
+
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script type="text/javascript" >
+
+
+
+  function fun2() {
+
+    var maths = parseInt(document.getElementById('maths').value);
+      var comp = parseInt(document.getElementById('comp').value);
+      var ba = parseInt(document.getElementById('ba').value);
+      var states = parseInt(document.getElementById('states').value);
+      var chemistry = parseInt(document.getElementById('chemistry').value);
+      var physics = parseInt(document.getElementById('physics').value);
+      var history = parseInt(document.getElementById('history').value);
+      var politics = parseInt(document.getElementById('politics').value);
+      var economics = parseInt(document.getElementById('economics').value);
+      var english = parseInt(document.getElementById('english').value);
+      var biology = parseInt(document.getElementById('biology').value);
+
+  var chart2 = new CanvasJS.Chart("chartContainer2", {
+    theme: "light2",
+    title:{
+      text: "Marks Representation"
+    },
+    data: [
+    {
+      type: "pie",
+      dataPoints: [
+        { label: "Theory",  y: maths+comp+states+chemistry+biology },
+        { label: "Practicle", y: ba+physics+politics+history+economics+english  }
+
+
+      ]
+    }
+    ]
+  });
+
+  document.getElementById('im1').innerHTML=chart2.render();
+    document.getElementById("printChart2").addEventListener("click",function(){
+      chart.print();
+    });
+  }
+
+
+
+
+
+
+
+
+    function fun() {
+
+      var maths = parseInt(document.getElementById('maths').value);
+        var comp = parseInt(document.getElementById('comp').value);
+        var ba = parseInt(document.getElementById('ba').value);
+        var states = parseInt(document.getElementById('states').value);
+        var chemistry = parseInt(document.getElementById('chemistry').value);
+        var physics = parseInt(document.getElementById('physics').value);
+        var history = parseInt(document.getElementById('history').value);
+        var politics = parseInt(document.getElementById('politics').value);
+        var economics = parseInt(document.getElementById('economics').value);
+        var english = parseInt(document.getElementById('english').value);
+        var biology = parseInt(document.getElementById('biology').value);
+
+    var chart = new CanvasJS.Chart("chartContainer1", {
+      theme: "light2",
+      title:{
+        text: "Marks Representation"
+      },
+      data: [
+      {
+        type: "column",
+        dataPoints: [
+          { label: "Math",  y: maths  },
+          { label: "Computer", y: comp  },
+          { label: "Stats", y: states},
+          { label: "Chemistry", y: chemistry},
+          { label: "Physics", y: physics},
+          { label: "History", y: history},
+          { label: "Politics", y: politics},
+          { label: "Economics", y: economics},
+          { label: "English", y: english},
+          { label: "Biology", y: biology}
+
+        ]
+      }
+      ]
+    });
+
+    document.getElementById('im1').innerHTML=chart.render();
+      document.getElementById("printChart").addEventListener("click",function(){
+        chart.print();
+      });
+    }
+
+
+    function empty()
+    {
+      var maths = document.getElementById('maths').value;
+        var comp = document.getElementById('comp').value;
+        var ba = document.getElementById('ba').value;
+        var states = document.getElementById('states').value;
+        var chemistry = document.getElementById('chemistry').value;
+        var physics = document.getElementById('physics').value;
+        var history = document.getElementById('history').value;
+        var politics = document.getElementById('politics').value;
+        var economics = document.getElementById('economics').value;
+        var english = document.getElementById('english').value;
+        var biology = document.getElementById('biology').value;
+      if((maths || comp || ba || states || chemistry || physics || history || politics || economics || english || biology)  > 100)
+      {
+        alert("Marks Greater Than 100")
+      }
+
+    }
+    </script>
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+</script>
+
+<script>
+     $(document).ready(function() {
+
+$(function() {
+    $('#submit').attr('disabled', 'disabled');
+});
+
+$('input[type=number]').keyup(function() {
+
+    if ($('#maths').val() !=''&&
+    $('#comp').val() != '' &&
+    $('#ba').val() != ''&&
+    $('#states').val() != '' &&
+    $('#chemistry').val() != ''&&
+    $('#physics').val() != '' &&
+    $('#history').val() != ''&&
+    $('#politics').val() != '' &&
+    $('#economics').val() != ''&&
+    $('#english').val() != '' &&
+    $('#biology').val() != '') {
+
+        $('#submit').removeAttr('disabled');
+    } else {
+        $('#submit').attr('disabled', 'disabled');
+    }
+});
+    });
+    </script>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme The Band</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    /*-webkit-filter: grayscale(90%);
+    /*filter: grayscale(90%);  make all photos black and white */
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+    height: 50%
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -
+  }
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#myPage">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#band">COURSES</a></li>
+        <li><a href="#tour">FIND BEST FOR YOU</a></li>
+        <!-- <li><a href="#contact">CONTACT</a></li> -->
+        <!-- <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Extras</a></li>
+            <li><a href="#">Media</a></li>
+          </ul>
+        </li> -->
+        <!-- <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li> -->
+
+
+
+
+
+
+
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<div rows=>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="http://education.abc.net.au/image/journal/article?img_id=3265350&t=1564367046490" alt="New York" width="1100" height="300">
+        <div class="carousel-caption">
+
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="http://education.historicacanada.ca/images/164/Indigenous_Perspectives_title.jpg?1521227350" alt="Chicago" width="1100" height="300">
+        <div class="carousel-caption">
+
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="la.jpg" alt="Los Angeles" width="1200" height="300">
+        <div class="carousel-caption">
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Container (The Band Section) -->
+<div id="band" class="container text-center">
+  <h3>COURSE INFORMATION</h3>
+
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>SCIENCE</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9UzlpCfosPXY9usNaouxfcS_vP4UchAo4jVUh3ZIH3qOUFC5j" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo" class="collapse">
+        <p>
+          <font color="blue">
+            Courses for PCM (Maths)<br>
+          </font>
+          <font color="black">
+            1.Engineering (B.E/ B.Tech))<br>
+            2.Environmental Science)<br>
+            3.B.Sc. Degree)<br>
+            4.Defence (Navy, Army, Air force))<br>
+
+            <br>
+          </font>
+            <font color="blue">
+              Courses for PCB (Biology)<br>
+            </font>
+            <font color="black">
+
+
+            1.Bachelor of Veterinary Science & Animal Husbandry (B.VSc AH<br>
+2.Bachelor of Naturopathy & Yogic Science (BNYS)<br>
+3.Bachelor of Physiotherapy)<br>
+4.B.Sc. Nursing)<br>
+5.Bachelor of Pharmacy)<br>
+6.Biotechnology)<br>
+
+          </font>
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>COMMERCE</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="https://www.successcds.net/Career/qna/wp-content/uploads/2010/02/commerce-500.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+
+      <p> <font color="black">
+         1. B.Com (Bachelor of Commerce)<br>
+          2.LLB (Bachelor of Laws)<br>
+          3. BBA (Bachelor of Business Administration)<br>
+          4.CA (Chartered Accountant)<br>
+          5.CS (Company Secretary)<br>
+          6.CMA (Cost and Management Accountant)<br>
+          7.CFP (Certified Financial Planner)<br>
+    </font>  </p>
+
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>ARTS</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO_HRVZ226KcniXQYPaCURxDyhxeCty0ODmg&usqp=CAU" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <font color="black"><p>
+          1.Fashion and Designing Courses<br>
+          2. Journalism and Mass Communication<br>
+          3.Bachelor of Arts (BA)<br>
+
+          4. Hotel Management<br>
+          5. Teacher Training courses<br>
+        </font></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (TOUR Section) -->
+<div id="tour" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">FIND BEST FOR YOU</h3>
+    <p class="text-center">Your marks are helpful to choosing your career<br> Try once!</p>
+
+       <div class="row text-center">
+           <div class="col-md-12">
+    <form action="{{ url_for('predict')}}" method="post">
+
+      <table border="2">
+      <tr>
+      <th><label id="demo1" onmouseover="mouseOver()" onmouseout="mouseOut()"> Q1.) Do you like to play with Numbers??</label></th>
+      <td><input type="radio" name="q1" value=100> Yes </input></td>
+      <td><input type="radio" name="q1" value=0> No  </input></td></p>
+      </tr>
+      </table>
+
+      <table border="2">
+      <tr>
+      <th><label id="demo2" onmouseover="mouseOver2()" onmouseout="mouseOut2()">Q2.) Are you creative??</label></th>
+      <td><input type="radio" name="q2" value=100> Yes </input></td>
+      <td><input type="radio" name="q2" value=0> No</input></td
+      </tr>
+      </table>
+
+      <table border="2">
+      <tr>
+      <th><label id="demo3" onmouseover="mouseOver3()" onmouseout="mouseOut3()">Q3.) Do you like to organise thinga or like to plan things??</label></th>
+      <td><input type="radio" name="q3" value=100> Yes </input></td>
+      <td><input type="radio" name="q3" value=0> No</input></td>
+      </tr>
+      </table>
+
+      <table border="2">
+      <tr>
+      <th><label id="demo4" onmouseover="mouseOver4()" onmouseout="mouseOut4()">Q4.) Do you like to interact with different types of people??</label></th>
+      <td><input type="radio" name="q4" value=100> Yes </input></td>
+      <td><input type="radio" name="q4" value=0> No</input></td>
+      </tr>
+      </table>
+
+      <table border="2">
+      <tr>
+      <th><label id="demo5" onmouseover="mouseOver5()" onmouseout="mouseOut5()">Q5.) Are you afraid of blood??</label></th>
+      <td><input type="radio" name="q5" value=100> Yes </input></td>
+      <td><input type="radio" name="q5" value=0> No</input></td>
+      </tr>
+      </table>
+
+      <table border="2">
+      <tr>
+      <th><label id="demo6" onmouseover="mouseOver6()" onmouseout="mouseOut6()">Q6.) Can you help injured people??</label></th>
+      <td><input type="radio" name="q6" value=100> Yes </input></td>
+      <td><input type="radio" name="q6" value=0> No</input></td>
+      </tr>
+      </table>
+
+
+      <table border="2">
+      <tr>
+      <th><label id="demo7" onmouseover="mouseOver7()" onmouseout="mouseOut7()">Q7.) Do you like to do social work??</label></th>
+      <td><input type="radio" name="q7" value=100> Yes </input></td>
+      <td><input type="radio" name="q7" value=0> No</input></td>
+      </tr>
+      </table>
+
+      <table border="2">
+      <tr>
+      <th><label id="demo8" onmouseover="mouseOver8()" onmouseout="mouseOut8()">Q8.) Are you good in public speaking ??</label></th>
+      <td><input type="radio" name="q8" value=100> Yes </input></td>
+      <td><input type="radio" name="q8" value=0> No</input></td>
+      </tr>
+      </table>
+
+
+      <table border="2">
+      <tr>
+      <th><label id="demo9" onmouseover="mouseOver9()" onmouseout="mouseOut9()">Q9.) Are you creative??</label></th>
+      <td><input type="radio" name="q9" value=100> Yes </input></td>
+      <td><input type="radio" name="q9" value=0> No</input></td>
+      </tr>
+      </table>
+
+      <table border="2">
+      <tr>
+      <th><label id="demo10" onmouseover="mouseOver10()" onmouseout="mouseOut10()">Q10.) Do you like to make new things??</label></th></th>
+      <td><input type="radio" name="q10" value=100> Yes </input></td>
+      <td><input type="radio" name="q10" value=0> No</input></td>
+      </tr>
+      </table>
+
+
+      <table border="2">
+      <tr>
+      <th><label id="demo11" onmouseover="mouseOver11()" onmouseout="mouseOut11()">Q11.) Do you like to learn new things??</label></th>
+      <td><input type="radio" name="q11" value=100> Yes </input></td>
+      <td><input type="radio" name="q11" value=0> No</input></td>
+      </tr>
+      </table>
+
+
+      <table border="2">
+      <tr>
+      <th><label id="demo12" onmouseover="mouseOver12()" onmouseout="mouseOut12()">Q12.) Do you believe that knowledge increases when spred across??</label></th>
+      <td><input type="radio" name="q12" value=100> Yes </input></td>
+      <td><input type="radio" name="q12" value=0> No</input></td>
+      </tr>
+      </table>
+
+
+      <br>
+      <h3 style="color: white">Enter your Academic Details</h3>
+      <hr>
+
+      <input type="number" id="maths"  name="maths"  placeholder="Maths Marks">
+      <input type="number" id="comp" name="comp" placeholder="Computer Marks">
+      <input type="number" id="ba" name="ba" placeholder="Business Administration Marks"><br><br>
+      <input type="number" id="states" name="states" placeholder="states Marks">
+      <input type="number" id="chemistry" name="chemistry" placeholder="Chemestry Marks">
+      <input type="number" id="physics"  name="physics" placeholder="Physics Marks"><br><br>
+      <input type="number" id="history"  name="history" placeholder="History Marks">
+      <input type="number" id="politics"  name="politics" placeholder="Politics Marks">
+      <input type="number" id="economics"  name="economics" placeholder="Economics Marks"><br><br>
+      <input type="number" id="english"  name="english" placeholder="English Marks">
+      <input type="number" id="biology"  name="biology" placeholder="Biology Marks"><br><br>
+      <div class="hidden">  <input type="number" name="field" value="0" placeholder="field"><br><br></div>
+
+      <input type ="submit" onclick="empty()" id="submit" value="Sumbit Marks"><br><br>
+
+  <br>
+  <br>
+
+  <!-- <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%"> -->
+   <!-- 70% -->
+  <!-- </div> -->
+</div>
+<div class="row text-center">
+  <div class="col-sm-3">
+  </div>
+  <div class="col-md-5">
+  <h2>
+  {{ prediction_text }}
+
+</h2>
+</div>
+</div>
+    </form>
+           <div>
+          <div>
+
+
+  <div class="row text-center">
+      <div class="col-sm-4">
+        <!-- <div class="thumbnail">
+          <p><strong>Marks Chart</strong></p>
+          <p>See Your Marks Graphically</p>
+          <button class="btn" data-toggle="modal"  data-target="#myModal">Graph</button>
+        </div> -->
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <p><strong>Theory v/s Practicle</strong></p>
+          <p>See in which you are good</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal1">Graph</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <!-- <div class="thumbnail">
+          <p><strong>San Francisco</strong></p>
+          <p>Sunday 29 November 2015</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+
+
+      <div class="modal-content">
+
+
+        <div id="chartContainer1"></div>
+          <button id="printChart" onclick="fun()">See Graph</button>
+          <div id="im1" >
+            </div>
+
+        <div class="modal-body">
+
+
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+
+
+      <div class="modal-content">
+
+
+        <div id="chartContainer2"></div>
+          <button id="printChart2" onclick="fun2()">See Good</button>
+          <div id="im2" >
+            </div>
+
+        <div class="modal-body">
+
+
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- Container (Contact Section) -->
+
+<!-- <div id="contact" class="container">
+
+    <div class="col-md-8">
+
+      <div class="row">
+        <input type="text" name="chat">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+
+
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip();
+
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
